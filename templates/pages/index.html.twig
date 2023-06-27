@@ -1,5 +1,7 @@
 {% extends "./layouts/standard.html.twig" %}
 
+{% block title %} Homepage {% endblock %}
+
 {% block content %}
 
     <div>
@@ -17,21 +19,21 @@
                 A software developer with {{ years }} years of experience, living happily on the coast in Plymouth, UK. I have had the opportunity to work with a variety of languages and technologies and frameworks. This diverse skillset has enabled me to tackle a wide range of projects and challenges, and improve my ability to create efficient, scalable, and user-friendly applications by choosing the right tech stack to meet the requirements of any project. I have always been driven by a passion for technology and the latest developments. I am always looking for new learning opportunities, to enhance my existing skills or to learn something new.
                 </p>
                 <a
-                href="/"
+                href="/contact"
                 class="mt-12 block bg-secondary px-10 py-4 text-center font-body text-xl font-semibold border-secondary border-2 text-white transition-colors hover:border-green hover:bg-green sm:inline-block sm:text-left sm:text-2xl"
                 >
                 Say Hello!
                 </a>
 
                 <a
-                href="/"
+                href="/assets/cv.pdf" target="_blank"
                 class="mt-12 block px-8 py-4 text-center font-body text-xl font-semibold border-secondary border-2 text-primary transition-colors hover:bg-secondary hover:text-white sm:inline-block sm:text-left sm:text-2xl"
                 >
                     Get a copy of my CV
                 </a>
             </div>
 
-            <div class="border-b border-grey-lighter py-16 lg:py-20">
+            <div class="border-b border-grey-lighter py-16 lg:pt-20 lg:pb-12">
                 <div class="flex items-center pb-6">
                     <img src="/assets/img/icon-uses.png" alt="icon tech stack" class="h-8 w-16"  />
                     <h3
@@ -41,24 +43,40 @@
                     </h3>
                 </div>
                 <div>
-                    <p class="font-body font-light text-primary dark:text-white">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Nibh mauris cursus
-                        mattis molestie. Et leo duis ut diam. Sit amet tellus cras adipiscing
-                        enim eu turpis. Adipiscing at in tellus integer feugiat.
-                        <br />
-                        <br />
-                        Maecenas accumsan lacus vel facilisis. Eget egestas purus viverra
-                        accumsan in nisl nisi scelerisque eu. Non tellus orci ac auctor augue
-                        mauris augue neque gravida. Auctor augue mauris augue neque gravida in
-                        fermentum et sollicitudin. Tempus urna et pharetra pharetra massa massa
-                        ultricies mi quis. Amet mauris commodo quis imperdiet massa. Integer
-                        vitae justo eget magna fermentum iaculis eu non.
-                    </p>
+
+                    <div class="flex flex-row flex-wrap justify-center">
+                        <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
+                            <img src="/assets/img/tech/php.png" class="h-16" alt="PHP Logo" />
+                        </div>
+                        <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
+                            <img src="/assets/img/tech/js.png" class="h-16" alt="JS Logo" />
+                        </div>
+                        <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
+                            <img src="/assets/img/tech/html5.png" class="h-16" alt="HTML Logo" />
+                        </div>
+                        <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
+                            <img src="/assets/img/tech/css.png" class="h-16" alt="CSS Logo" />
+                        </div>
+                        <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
+                            <img src="/assets/img/tech/react.png" class="h-16" alt="React Logo" />
+                        </div>
+                        <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
+                            <img src="/assets/img/tech/go.png" class="h-16" alt="Golang Logo" />
+                        </div>
+                         <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
+                            <img src="/assets/img/tech/MySQL.png" class="h-16" alt="MySQL Logo" />
+                        </div>
+                        <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4 pt-8">
+                            <img src="/assets/img/tech/mongodb.png" class="h-8" alt="MongoDB Logo" />
+                        </div>
+                         <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
+                            <img src="/assets/img/tech/docker.png" class="h-16" alt="Docker Logo" />
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="py-16 lg:py-20">
+            <!--<div class="py-16 lg:py-20">
                 <div class="flex items-center pb-6">
                     <img src="/assets/img/icon-blog.png" alt="icon blog" class="h-8 w-12"/>
                     <h3
@@ -146,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="pb-16 lg:pb-20">
                 <div class="flex items-center pb-6">
@@ -160,17 +178,17 @@
                 <div>
       
                     <a
-                        href=" / "
+                        href="https://github.com/mdoddzz/f1-scraper-go" target="_blank"
                         class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
                     >
                         <span class="w-9/10 pr-8">
                             <h4
                                 class="font-body text-lg font-semibold text-primary dark:text-white"
                             >
-                                TailwindCSS
+                                f1-scraper-go
                             </h4>
                             <p class="font-body font-light text-primary dark:text-white">
-                                Rapidly build modern websites without ever leaving your HTML.
+                                A golang scraper to get all the archive data from the F1 official site.
                             </p>
                         </span>
                         <span class="w-1/10">
@@ -179,17 +197,17 @@
                     </a>
       
                     <a
-                        href=" / "
+                        href="/"
                         class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
                     >
                         <span class="w-9/10 pr-8">
                             <h4
                                 class="font-body text-lg font-semibold text-primary dark:text-white"
                             >
-                                Maizzle
+                                Personal Site
                             </h4>
                             <p class="font-body font-light text-primary dark:text-white">
-                                Framework for Rapid Email Prototyping
+                                This site that is used to show off my skills and add my online presence.
                             </p>
                         </span>
                         <span class="w-1/10">
@@ -198,17 +216,17 @@
                     </a>
       
                     <a
-                        href=" / "
+                        href="https://github.com/mdoddzz/mdevz-tools" target="_blank"
                         class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
                     >
                         <span class="w-9/10 pr-8">
                             <h4
                                 class="font-body text-lg font-semibold text-primary dark:text-white"
                             >
-                                Alpine.js
+                                mDevz Tools
                             </h4>
                             <p class="font-body font-light text-primary dark:text-white">
-                                Think of it like Tailwind for JavaScript.
+                                A site with a few tools that make life easier for developers and general internet users.
                             </p>
                         </span>
                         <span class="w-1/10">
@@ -217,17 +235,17 @@
                     </a>
       
                     <a
-                        href=" / "
+                        href="https://github.com/mdoddzz/mdevz-tools-api" target="_blank"
                         class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
                     >
                         <span class="w-9/10 pr-8">
                             <h4
                                 class="font-body text-lg font-semibold text-primary dark:text-white"
                             >
-                                PostCSS
+                                mDevz Tools API
                             </h4>
                             <p class="font-body font-light text-primary dark:text-white">
-                                A tool for transforming CSS with JavaScript
+                                The API that handles the backend for the mDevz tools site.
                             </p>
                         </span>
                         <span class="w-1/10">
