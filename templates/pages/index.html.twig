@@ -8,7 +8,7 @@
         <div class="container mx-auto">
             <div class="border-b border-grey-lighter py-16 lg:py-20">
                 <div>
-                    <img src="/assets/img/author.png" class="h-32 w-32" alt="author" />
+                    <img src="{{ absolute_url("assets/img/author.png") }}" class="h-32 w-32" alt="author" />
                 </div>
                 <h1
                 class="pt-5 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl"
@@ -26,7 +26,7 @@
                 </a>
 
                 <a
-                href="/assets/cv.pdf" target="_blank"
+                href="{{ absolute_url("assets/cv.pdf") }}" target="_blank"
                 class="mt-12 block px-8 py-4 text-center font-body text-xl font-semibold border-secondary border-2 text-primary transition-colors hover:bg-secondary hover:text-white sm:inline-block sm:text-left sm:text-2xl dark:text-white"
                 >
                     Get a copy of my CV
@@ -35,7 +35,7 @@
 
             <div class="border-b border-grey-lighter py-16 lg:pt-20 lg:pb-12">
                 <div class="flex items-center pb-6">
-                    <img src="/assets/img/icon-uses.png" alt="icon tech stack" class="h-8 w-16"  />
+                    <img src="{{ absolute_url("assets/img/icon-uses.png") }}" alt="icon tech stack" class="h-8 w-16"  />
                     <h3
                         class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
                     >
@@ -46,31 +46,31 @@
 
                     <div class="flex flex-row flex-wrap justify-center">
                         <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
-                            <img src="/assets/img/tech/php.png" class="h-16" alt="PHP Logo" />
+                            <img src="{{ absolute_url("assets/img/tech/php.png") }}" class="h-16" alt="PHP Logo" />
                         </div>
                         <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
-                            <img src="/assets/img/tech/js.png" class="h-16" alt="JS Logo" />
+                            <img src="{{ absolute_url("assets/img/tech/js.png") }}" class="h-16" alt="JS Logo" />
                         </div>
                         <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
-                            <img src="/assets/img/tech/html5.png" class="h-16" alt="HTML Logo" />
+                            <img src="{{ absolute_url("assets/img/tech/html5.png") }}" class="h-16" alt="HTML Logo" />
                         </div>
                         <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
-                            <img src="/assets/img/tech/css.png" class="h-16" alt="CSS Logo" />
+                            <img src="{{ absolute_url("assets/img/tech/css.png") }}" class="h-16" alt="CSS Logo" />
                         </div>
                         <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
-                            <img src="/assets/img/tech/react.png" class="h-16" alt="React Logo" />
+                            <img src="{{ absolute_url("assets/img/tech/react.png") }}" class="h-16" alt="React Logo" />
                         </div>
                         <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
-                            <img src="/assets/img/tech/go.png" class="h-16" alt="Golang Logo" />
+                            <img src="{{ absolute_url("assets/img/tech/go.png") }}" class="h-16" alt="Golang Logo" />
                         </div>
                          <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
-                            <img src="/assets/img/tech/MySQL.png" class="h-16" alt="MySQL Logo" />
+                            <img src="{{ absolute_url("assets/img/tech/MySQL.png") }}" class="h-16" alt="MySQL Logo" />
                         </div>
                         <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4 pt-8">
-                            <img src="/assets/img/tech/mongodb.png" class="h-8" alt="MongoDB Logo" />
+                            <img src="{{ absolute_url("assets/img/tech/mongodb.png") }}" class="h-8" alt="MongoDB Logo" />
                         </div>
                          <div class="lg:basis-1/6 basis-2/6 flex flex-col items-center p-4">
-                            <img src="/assets/img/tech/docker.png" class="h-16" alt="Docker Logo" />
+                            <img src="{{ absolute_url("assets/img/tech/docker.png") }}" class="h-16" alt="Docker Logo" />
                         </div>
                     </div>
                 </div>
@@ -168,7 +168,7 @@
 
             <div class="py-16 lg:pb-20">
                 <div class="flex items-center pb-6">
-                    <img src="/assets/img/icon-project.png" alt="icon story" class="h-8 w-6"  />
+                    <img src="{{ absolute_url("assets/img/icon-project.png") }}" alt="icon story" class="h-8 w-6"  />
                     <h3
                         class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
                     >
@@ -181,7 +181,7 @@
                         href="https://github.com/mdoddzz/f1-scraper-go" target="_blank"
                         class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
                     >
-                        <span class="w-9/10 pr-8">
+                        <div class="w-9/10 pr-8">
                             <h4
                                 class="font-body text-lg font-semibold text-primary dark:text-white"
                             >
@@ -190,9 +190,9 @@
                             <p class="font-body font-light text-primary dark:text-white">
                                 A golang scraper to get all the archive data from the F1 official site.
                             </p>
-                        </span>
+                        </div>
                         <span class="w-1/10">
-                            <img src="/assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
+                            <img src="{{ absolute_url("assets/img/chevron-right.png") }}" class="mx-auto" alt="chevron right" />
                         </span>
                     </a>
       
@@ -200,7 +200,7 @@
                         href="/"
                         class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
                     >
-                        <span class="w-9/10 pr-8">
+                        <div class="w-9/10 pr-8">
                             <h4
                                 class="font-body text-lg font-semibold text-primary dark:text-white"
                             >
@@ -209,9 +209,9 @@
                             <p class="font-body font-light text-primary dark:text-white">
                                 This site that is used to show off my skills and add my online presence.
                             </p>
-                        </span>
+                        </div>
                         <span class="w-1/10">
-                            <img src="/assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
+                            <img src="{{ absolute_url("assets/img/chevron-right.png") }}" class="mx-auto" alt="chevron right" />
                         </span>
                     </a>
       
@@ -219,7 +219,7 @@
                         href="https://github.com/mdoddzz/mdevz-tools" target="_blank"
                         class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
                     >
-                        <span class="w-9/10 pr-8">
+                        <div class="w-9/10 pr-8">
                             <h4
                                 class="font-body text-lg font-semibold text-primary dark:text-white"
                             >
@@ -228,9 +228,9 @@
                             <p class="font-body font-light text-primary dark:text-white">
                                 A site with a few tools that make life easier for developers and general internet users.
                             </p>
-                        </span>
+                        </div>
                         <span class="w-1/10">
-                            <img src="/assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
+                            <img src="{{ absolute_url("assets/img/chevron-right.png") }}" class="mx-auto" alt="chevron right" />
                         </span>
                     </a>
       
@@ -238,18 +238,18 @@
                         href="https://github.com/mdoddzz/mdevz-tools-api" target="_blank"
                         class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
                     >
-                        <span class="w-9/10 pr-8">
-                            <h4
+                        <div class="w-9/10 pr-8">
+                            <h1
                                 class="font-body text-lg font-semibold text-primary dark:text-white"
                             >
                                 mDevz Tools API
-                            </h4>
+                            </h1>
                             <p class="font-body font-light text-primary dark:text-white">
                                 The API that handles the backend for the mDevz tools site.
                             </p>
-                        </span>
+                        </div>
                         <span class="w-1/10">
-                            <img src="/assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
+                            <img src="{{ absolute_url("assets/img/chevron-right.png") }}" class="mx-auto" alt="chevron right" />
                         </span>
                     </a>
       

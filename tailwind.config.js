@@ -40,6 +40,9 @@ module.exports = {
       "grey-lighter": "#eceef1",
       "grey-light": "#ccd7e0",
       grey: "#adb6c4",
+      red: "#d10000",
+      "red-dark": "#440707",
+      "red-light": "#f1b3b3"
     },
 
     border: {

@@ -47,8 +47,13 @@ function toggleDarkMode() {
 function toggleMobileMenu() {
 
     const menu = document.getElementById("mobile-menu");
+    const body = document.getElementById("body");
 
     menu.classList.toggle("opacity-100")
     menu.classList.toggle("pointer-events-auto")
+
+    body.classList.toggle("max-h-screen")
+    body.classList.toggle("overflow-hidden")
+    body.classList.toggle("relative")
 
 }
