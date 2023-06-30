@@ -1,0 +1,88 @@
+{% extends "./layouts/standard.html.twig" %}
+
+{% block title %} Portfolio {% endblock %}
+
+{% block content %}
+
+    <div>
+        <div class="container mx-auto">
+            <div class="py-16 lg:py-20">
+                <div>
+                    <img src="/assets/img/icon-blog.png" alt="icon envelope" />
+                </div>
+
+                <h1 class="pt-5 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl">Portfolio</h1>
+
+                <div class="pt-3 sm:w-3/4">
+                    <p class="font-body text-xl font-light text-primary dark:text-white">
+                        My projects I spend my time working on, at various levels of completion and maintenance.
+                    </p>
+                </div>
+
+                <div class="pt-8 lg:pt-12">
+                    <div class="border-b border-grey-lighter pb-8">
+                        <span class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue">Golang</span>
+                        <span class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark">Git</span>
+                        <span class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark">API</span>
+                        <a href="/post" class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
+                        >f1-scraper-go</a>
+                        <span class="block text-primary dark:text-white">A golang scraper using the <a href="https://github.com/gocolly/colly" target="_blank" class="text-blue visited:text-green-dark">colly</a> framework to get all the archive data from the F1 official site. This involves challenges of changing formats for over the past 70 years of motorsports. The end goal is to use this to create a data api for a frontend project "f1-custom" to customise F1 seasons.</span>
+
+                        <div class="flex items-center pt-4">
+                            <p class="pr-2 font-body font-light text-primary dark:text-white">
+                                Updated: July 19, 2023
+                            </p>
+                            <span class="font-body text-grey dark:text-white">//</span>
+                            <p class="pl-2 font-body font-light text-primary dark:text-white">
+                                v1.0.0
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-b border-grey-lighter pt-10 pb-8">
+                        <span class="mb-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green">React</span>
+                        <span class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue">Typescript</span>
+                        <span class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark">Git</span>
+                        <span class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark">W.I.P</span>
+                        <a href="/post" class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary">f1-custom</a>
+                        <div class="flex items-center pt-4">
+                            <p class="pr-2 font-body font-light text-primary dark:text-white">
+                                June 30, 2020
+                            </p>
+                            <span class="font-body text-grey dark:text-white">//</span>
+                            <p class="pl-2 font-body font-light text-primary dark:text-white">
+                                5 min read
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-b border-grey-lighter pt-10 pb-8">
+                        <span class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue">category</span>
+                        <a href="/post" class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary">In eu mi bibendum neque egestas congue quisque egestas diam</a>
+                        <div class="flex items-center pt-4">
+                            <p class="pr-2 font-body font-light text-primary dark:text-white">
+                                June 26, 2020
+                            </p>
+                            <span class="font-body text-grey dark:text-white">//</span>
+                            <p class="pl-2 font-body font-light text-primary dark:text-white">
+                                3 min read
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-b border-grey-lighter pt-10 pb-8">
+                        <span class="mb-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green">category</span>
+                        <a href="/post" class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary">Elit eget gravida cum sociis natoque penatibus et magnis dis</a>
+                        <div class="flex items-center pt-4">
+                            <p class="pr-2 font-body font-light text-primary dark:text-white">
+                                July 19, 2020
+                            </p>
+                            <span class="font-body text-grey dark:text-white">//</span>
+                            <p class="pl-2 font-body font-light text-primary dark:text-white">
+                                4 min read
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -9,6 +9,15 @@ index:
     path: /
     controller: App\Controller\HomeController::index
 
+portfolio:
+    path: /portfolio
+    controller: App\Controller\PortfolioController::portfolio
+
 contact:
     path: /contact
     controller: App\Controller\ContactController::contact
+
+contact_submit:
+    path: /contact/submit
+    controller: App\Controller\ContactController::submitContact
+    methods: POST
