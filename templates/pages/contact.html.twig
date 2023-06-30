@@ -20,59 +20,33 @@
                         Got a question or proposal, or just want to say hello? Go ahead. You know what to do.
                     </p>
                 </div>
-                <form action="{{ submit_form }}" method="post" class="pt-16">
+                {{ form_start(form, {'attr': {'class': 'pt-16'}}) }}
+                    {{ form_errors(form) }}
+
                     <div class="flex flex-col sm:flex-row">
                         <div class="w-full sm:mr-3 sm:w-1/2">
-                            <label
-                                for="name"
-                                class="block pb-3 font-body font-medium text-primary dark:text-white"
-                                >Your Name</label
-                            >
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="John Doe"
-                                class="w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white"
-                            />
+                            {{ form_label(form.name, 'Your Name', {'label_attr': {'class': 'block pb-3 font-body font-medium text-primary dark:text-white'}}) }}
+                            {{ form_widget(form.name, {'attr': {'placeholder': 'John Doe', 'class': 'w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white'}}) }}
+                            {{ form_errors(form.name) }}
                         </div>
                         <div class="w-full pt-6 sm:ml-3 sm:w-1/2 sm:pt-0">
-                            <label
-                                for="email"
-                                class="block pb-3 font-body font-medium text-primary dark:text-white"
-                                >Email Address</label
-                            >
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="mail@example.com"
-                                class="w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white"
-                            />
+                            {{ form_label(form.email, 'Email Address', {'label_attr': {'class': 'block pb-3 font-body font-medium text-primary dark:text-white'}}) }}
+                            {{ form_widget(form.email, {'attr': {'placeholder': 'mail@example.com', 'class': 'w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white'}}) }}
+                            {{ form_errors(form.email) }}
                         </div>
                     </div>
+
                     <div class="w-full pt-6 sm:pt-10">
-                        <label
-                            class="block pb-3 font-body font-medium text-primary dark:text-white"
-                            for="message"
-                            >Message</label
-                        >
-                        <textarea
-                            id="message"
-                            name="message"
-                            cols="30"
-                            rows="9"
-                            placeholder="Your message to me"
-                            class="w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white"
-                        ></textarea>
+                        {{ form_label(form.message, 'Message', {'label_attr': {'class': 'block pb-3 font-body font-medium text-primary dark:text-white'}}) }}
+                        {{ form_widget(form.message, {'attr': {'placeholder': 'Your message to me', 'rows': 8, 'class': 'w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white'}}) }}
+                        {{ form_errors(form.message) }}
                     </div>
-                    <button
-                        class="mt-10 mb-12 block bg-secondary px-10 py-4 text-center font-body text-xl font-semibold text-white transition-colors hover:bg-green sm:inline-block sm:text-left sm:text-2xl"
-                        type="submit"
-                    > 
-                        Send Message
-                    </button>
-                </form>
+
+                    {{ form_widget(form._token) }} <!-- Add CSRF token field -->
+
+                    {{ form_row(form.save, { 'label': 'Send Message', 'attr': {'class' : 'mt-10 mb-12 block bg-secondary px-10 py-4 text-center font-body text-xl font-semibold text-white transition-colors hover:bg-green sm:inline-block sm:text-left sm:text-2xl'} }) }}
+
+                {{ form_end(form) }}
             </div>
         </div>
     </div>
