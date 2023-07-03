@@ -5,7 +5,7 @@
     <div class="flex items-center justify-between py-6 lg:py-10">
         <a href="/" class="flex items-center">
             <span class="mr-2">
-                <img src="{{ absolute_url("assets/img/logo.png") }}" alt="logo" class="h-8" />
+                <img src="{{ asset("assets/img/logo.png") }}" alt="logo" class="h-8" />
             </span>
             <p
                 class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block"
@@ -143,7 +143,7 @@
         >
             <div class="mr-auto flex flex-col items-center sm:flex-row">
                 <a href="/" class="mr-auto sm:mr-6">
-                    <img src="{{ absolute_url("assets/img/logo.png") }}" alt="logo" class="h-4"/>
+                    <img src="{{ asset("assets/img/logo.png") }}" alt="logo" class="h-4"/>
                 </a>
                 <p class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0">
                     ©{{ "now"|date("Y") }} Michael Dodd.

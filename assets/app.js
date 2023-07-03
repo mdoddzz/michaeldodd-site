@@ -13,7 +13,7 @@ document.getElementById("mobile-menu-toggle").addEventListener("click", toggleMo
 document.getElementById("mobile-menu-close").addEventListener("click", toggleMobileMenu);
 
 // Handle theme listeners
-document.getElementById("theme-toggle").addEventListener("click", toggleDarkMode);
+document.getElementById("theme-toggle").addEventListener("click", toggleDarkMode)
 
 // Handle initiating theme
 function initTheme() {
