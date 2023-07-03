@@ -1,0 +1,45 @@
+{% extends "./emails/base.html.twig" %}
+
+{% block title %} New Website Contact {% endblock %}
+
+{% block preheader %} New Website Contact Submission from {{ form_name }} {% endblock %}
+
+{% block content %}
+
+    <tr>
+        <td class="wrapper">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <h1>New Contact Form Submission</h1>
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" >
+                            <tbody>
+                                <tr>
+                                    <td><strong>Time Submitted: </strong></td>
+                                    <td>{{ "now"|date("d/m/Y H:i") }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Name: </strong></td>
+                                    <td>{{ form_name }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Email: </strong></td>
+                                    <td>{{ form_email }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Message: </strong></td>
+                                    <td>{{ form_message|nl2br }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CV Requested: </strong></td>
+                                    <td>{{ form_cv }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+{% endblock %}

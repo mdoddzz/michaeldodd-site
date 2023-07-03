@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Entity\ContactForm;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -12,7 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Doctrine\ORM\EntityManagerInterface;
 
 class ContactController extends AbstractController
@@ -38,17 +39,25 @@ class ContactController extends AbstractController
             $entityManager->flush();
 
             // Send email with details
-            $email = (new Email())
+            $email = (new TemplatedEmail())
                 ->from('no-reply@michaeldodd.co.uk')
                 ->to('whomjd5@gmail.com')
-                ->subject('Time for Symfony Mailer!')
-                ->text("test")
-                ->html('<p>See Twig integration for better HTML integration!</p>') ;
+                ->replyTo($contactForm->getEmail())
+                ->subject('New Website Contact Submission from ' . $contactForm->getName())
+                ->text("Name: " . $contactForm->getName() . "\n Email: " . $contactForm->getEmail() . "\n Message: " . $contactForm->getMessage() . "\n CV Request: " . $contactForm->isRequestCV() ? "Yes" : "No")
+                ->htmlTemplate('emails/contact.html.twig')
+                ->context([
+                    'form_name' => $contactForm->getName(),
+                    'form_email' => $contactForm->getEmail(),
+                    'form_message' => $contactForm->getMessage(),
+                    'form_cv' => $contactForm->isRequestCV() ? "Yes" : "No",
+                ])
+            ;
 
             try {
                 $mailer->send($email);
             } catch (TransportExceptionInterface $e) {
-                // Handle mail send error
+                $form->addError(new FormError($e->getMessage()));
             }
 
             return $this->redirectToRoute('contact_success');
